@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>People · CCEL</title>
+<link rel="stylesheet" href="_shared/brand/brand.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html"><img class="ccel-logo" data-logo src="_shared/img/logo2.png" width="200" height="102" alt="CCEL logo"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars"></span><span class="sr">Menu</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="members.html" aria-current="page">People</a></li>
+        <li><a href="index.html#news">News</a></li>
+        <li><a href="index.html#join">Join Us</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="inner">
+  <div class="page-head">
+    <div class="wrap">
+      <h1>People</h1>
+      <p class="lede" id="people-lede"></p>
+      <nav class="subnav" id="people-subnav" aria-label="People sections"></nav>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="toolbar" role="group" aria-label="Filter by research type">
+      <span class="lbl" id="type-lbl">Show</span>
+      <div class="seg" id="type-filter" aria-labelledby="type-lbl">
+        <label><input type="radio" name="type" value="all" checked><span>All</span></label>
+        <label><input type="radio" name="type" value="computational"><span>Computational</span></label>
+        <label><input type="radio" name="type" value="experimental"><span>Experimental</span></label>
+      </div>
+    </div>
+    <section class="group" id="professor" aria-labelledby="h-prof">
+      <h2 id="h-prof">Professor</h2>
+      <div class="prof" id="prof"></div>
+      <div class="prof-cv" id="prof-cv"></div>
+    </section>
+    <div id="groups"></div>
+    <section class="group" id="alumni" aria-labelledby="h-alumni">
+      <h2 id="h-alumni">Alumni<span class="n" id="alumni-n"></span></h2>
+      <div id="alumni-groups"></div>
+    </section>
+    <div style="height:72px"></div>
+  </div>
+</main>
+
+<footer class="site-ftr" id="site-ftr"></footer>
+
+<script src="_shared/content.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/people.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCEL · Seoul National University</title>
+<meta name="description" content="Computational Catalysis and Emerging Materials Laboratory, Department of Materials Science and Engineering, Seoul National University.">
+<script>
+  /* decide the stage mode before first layout so #anchors land on the final positions */
+  if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('scrub');
+</script>
+<link rel="preload" as="image" href="_shared/scroll/hero_poster.webp" fetchpriority="high">
+<link rel="stylesheet" href="_shared/brand/brand.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#research">Skip to content</a>
+
+<header class="site-hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html"><img class="ccel-logo" data-logo src="_shared/img/logo2.png" width="200" height="102" alt="CCEL logo"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars"></span><span class="sr">Menu</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="members.html">People</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#join">Join Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Scroll stage: canvas scrubs the manifest's `hero` frames behind the title block, then resolves to white. -->
+  <section id="stage" class="stage" aria-labelledby="lab-name">
+    <div class="stage-pin">
+      <div class="stage-media" aria-hidden="true">
+        <img class="stage-poster" src="_shared/scroll/hero_poster.webp" alt="" decoding="async" fetchpriority="high">
+        <canvas class="stage-canvas"></canvas>
+      </div>
+      <div class="wrap stage-body">
+        <div class="stage-panel">
+          <p class="eyebrow" id="lab-aff"></p>
+          <h1 id="lab-name"></h1>
+          <p class="identity" id="lab-identity"></p>
+          <p class="intro" id="lab-intro"></p>
+          <p class="facts" id="lab-facts"></p>
+        </div>
+      </div>
+      <p class="scroll-hint" aria-hidden="true">Scroll</p>
+    </div>
+    <noscript><p class="wrap">This site renders its content from a data file with JavaScript. Please enable JavaScript.</p></noscript>
+  </section>
+
+  <section id="research" class="sec" aria-labelledby="h-research">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-research">Research</h2><span class="aside" id="research-aside"></span></div>
+      <div class="research-intro">
+        <div id="research-text"></div>
+        <figure class="fig" id="research-fig"></figure>
+      </div>
+      <p class="about-ko" lang="ko" id="about-ko"></p>
+      <div class="areas" id="areas"></div>
+    </div>
+  </section>
+
+  <section id="publications" class="sec" aria-labelledby="h-selected">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-selected">Selected Publications</h2><span class="aside" id="selected-aside"></span></div>
+      <div class="cites" id="selected"></div>
+      <h3 class="sec-sub" id="highlights">Recent Highlights</h3>
+      <div class="cites" id="recent"></div>
+      <details class="small-print"><summary>How these two lists are chosen</summary><p id="rules"></p></details>
+      <p class="sec-links" id="pub-links"></p>
+    </div>
+  </section>
+
+  <section id="people" class="sec band" aria-labelledby="h-people">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-people">People</h2><a class="more aside" href="members.html">All members and alumni</a></div>
+      <div class="prof" id="prof"></div>
+      <p class="counts" id="counts"></p>
+      <h3 class="sec-sub" id="postdoc-head">Postdoctoral researchers</h3>
+      <div class="people" id="people-preview"></div>
+    </div>
+  </section>
+
+  <section id="news" class="sec" aria-labelledby="h-news">
+    <div class="wrap two-col">
+      <div>
+        <div class="sec-head"><h2 id="h-news">News</h2></div>
+        <ul class="news" id="news-list"></ul>
+      </div>
+      <div class="join" id="join">
+        <div class="sec-head"><h2 id="h-join">Join Us</h2></div>
+        <p lang="ko" id="opening"></p>
+        <a class="mail" id="join-mail" href="#contact">Email Prof. Han</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="sec band" aria-labelledby="h-contact">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-contact">Contact</h2></div>
+      <dl class="contact-grid" id="contact-grid"></dl>
+    </div>
+  </section>
+</main>
+
+<footer class="site-ftr" id="site-ftr"></footer>
+
+<script src="_shared/content.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/home.js"></script>
+<script src="assets/stage.js"></script>
+</body>
+</html>

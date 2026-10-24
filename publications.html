@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications · CCEL</title>
+<link rel="stylesheet" href="_shared/brand/brand.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html"><img class="ccel-logo" data-logo src="_shared/img/logo2.png" width="200" height="102" alt="CCEL logo"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars"></span><span class="sr">Menu</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="publications.html" aria-current="page">Publications</a></li>
+        <li><a href="members.html">People</a></li>
+        <li><a href="index.html#news">News</a></li>
+        <li><a href="index.html#join">Join Us</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="inner">
+  <div class="page-head">
+    <div class="wrap">
+      <h1>Publications</h1>
+      <p class="lede" id="pub-lede"></p>
+      <div class="subnav" role="tablist" aria-label="Publication views">
+        <button type="button" role="tab" id="tab-all" aria-controls="view-all" aria-selected="true" data-view="all">All publications</button>
+        <button type="button" role="tab" id="tab-selected" aria-controls="view-selected" aria-selected="false" data-view="selected">Selected</button>
+        <button type="button" role="tab" id="tab-covers" aria-controls="view-covers" aria-selected="false" data-view="covers">Covers</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section id="view-all" role="tabpanel" aria-labelledby="tab-all">
+      <form class="filters" id="filters" role="search" onsubmit="return false">
+        <label class="q">Search title, author or journal<input type="search" id="f-q" autocomplete="off" placeholder="e.g. single-atom, Choung, Nature"></label>
+        <label>Year<select id="f-year"><option value="">All years</option></select></label>
+        <label>Status<select id="f-status"><option value="">Any status</option></select></label>
+        <label>Research area<select id="f-area"><option value="">All areas</option></select></label>
+        <label class="check"><input type="checkbox" id="f-led"> Lab-led only</label>
+      </form>
+      <p class="result-line" id="result-line" aria-live="polite"></p>
+      <div id="year-list"></div>
+      <p class="empty" id="empty" hidden>No publications match these filters.</p>
+    </section>
+
+    <section id="view-selected" role="tabpanel" aria-labelledby="tab-selected" hidden>
+      <h2 class="sec-sub">Selected Publications</h2>
+      <div class="cites" id="sel-list"></div>
+      <h2 class="sec-sub">Recent Highlights</h2>
+      <div class="cites" id="hl-list"></div>
+      <details class="small-print"><summary>How these two lists are chosen</summary><p id="rules"></p></details>
+    </section>
+
+    <section id="view-covers" role="tabpanel" aria-labelledby="tab-covers" hidden>
+      <h2 class="sec-sub">Journal covers</h2>
+      <div class="cover-grid" id="cover-front"></div>
+      <h2 class="sec-sub">Back and inside pages</h2>
+      <div class="cover-grid" id="cover-back"></div>
+    </section>
+    <div style="height:72px"></div>
+  </div>
+</main>
+
+<footer class="site-ftr" id="site-ftr"></footer>
+
+<script src="_shared/content.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/pubs.js"></script>
+</body>
+</html>
