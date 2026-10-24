@@ -171,8 +171,8 @@
       '<span class="ccel-logo-plate"><img class="ccel-logo" src="' + esc(asset(lab.logo)) + '" alt="' + esc(lab.short || '') + ' logo" loading="lazy" width="160" height="81"></span>' +
       '<div><p class="ftr-name">' + esc(lab.name) + '</p>' +
       '<p>' + esc(c.address) + '</p><p><a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a></p></div>' +
-      '<ul><li><a href="index.html#research">Research</a></li><li><a href="publications.html">Publications</a></li>' +
-      '<li><a href="members.html">People</a></li><li><a href="index.html#contact">Contact</a></li></ul></div>';
+      '<ul><li><a href="members.html">Members</a></li><li><a href="research.html">Research</a></li>' +
+      '<li><a href="publications.html">Publications</a></li><li><a href="index.html#contact">Contact</a></li></ul></div>';
   }
 
   // after client rendering, land on the requested anchor (the sticky stage above makes early jumps unreliable)

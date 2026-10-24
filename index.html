@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<a class="skip" href="#research">Skip to content</a>
+<a class="skip" href="#news">Skip to content</a>
 
 <header class="site-hdr">
   <div class="wrap hdr-in">
@@ -23,11 +23,11 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars"></span><span class="sr">Menu</span></button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
-        <li><a href="#research">Research</a></li>
+        <li><a href="index.html" aria-current="page">Welcome</a></li>
+        <li><a href="members.html#professor">Professor</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="research.html">Research</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="members.html">People</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#join">Join Us</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -46,47 +46,12 @@
         <div class="stage-panel">
           <p class="eyebrow" id="lab-aff"></p>
           <h1 id="lab-name"></h1>
-          <p class="identity" id="lab-identity"></p>
-          <p class="intro" id="lab-intro"></p>
-          <p class="facts" id="lab-facts"></p>
+          <p class="identity" id="lab-tagline"></p>
         </div>
       </div>
       <p class="scroll-hint" aria-hidden="true">Scroll</p>
     </div>
     <noscript><p class="wrap">This site renders its content from a data file with JavaScript. Please enable JavaScript.</p></noscript>
-  </section>
-
-  <section id="research" class="sec" aria-labelledby="h-research">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="h-research">Research</h2><span class="aside" id="research-aside"></span></div>
-      <div class="research-intro">
-        <div id="research-text"></div>
-        <figure class="fig" id="research-fig"></figure>
-      </div>
-      <p class="about-ko" lang="ko" id="about-ko"></p>
-      <div class="areas" id="areas"></div>
-    </div>
-  </section>
-
-  <section id="publications" class="sec" aria-labelledby="h-selected">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="h-selected">Selected Publications</h2><span class="aside" id="selected-aside"></span></div>
-      <div class="cites" id="selected"></div>
-      <h3 class="sec-sub" id="highlights">Recent Highlights</h3>
-      <div class="cites" id="recent"></div>
-      <details class="small-print"><summary>How these two lists are chosen</summary><p id="rules"></p></details>
-      <p class="sec-links" id="pub-links"></p>
-    </div>
-  </section>
-
-  <section id="people" class="sec band" aria-labelledby="h-people">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="h-people">People</h2><a class="more aside" href="members.html">All members and alumni</a></div>
-      <div class="prof" id="prof"></div>
-      <p class="counts" id="counts"></p>
-      <h3 class="sec-sub" id="postdoc-head">Postdoctoral researchers</h3>
-      <div class="people" id="people-preview"></div>
-    </div>
   </section>
 
   <section id="news" class="sec" aria-labelledby="h-news">
@@ -95,10 +60,31 @@
         <div class="sec-head"><h2 id="h-news">News</h2></div>
         <ul class="news" id="news-list"></ul>
       </div>
-      <div class="join" id="join">
-        <div class="sec-head"><h2 id="h-join">Join Us</h2></div>
-        <p lang="ko" id="opening"></p>
-        <a class="mail" id="join-mail" href="#contact">Email Prof. Han</a>
+      <div class="join" id="opening">
+        <div class="sec-head"><h2 id="h-opening">Open Position</h2></div>
+        <p lang="ko" id="opening-ko"></p>
+        <a class="mail" id="join-mail" href="#contact">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="selected-publications" class="sec" aria-labelledby="h-selected">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-selected">Selected Publications</h2></div>
+      <ul class="sel" id="selected-list"></ul>
+      <p class="sec-links"><a class="more" href="publications.html#selected">Full citations and Recent Highlights on the Publications page</a></p>
+    </div>
+  </section>
+
+  <section id="about" class="sec" aria-labelledby="h-about">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-about">About CCEL</h2></div>
+      <div class="about">
+        <div class="about-text">
+          <p class="about-ko" lang="ko" id="about-ko"></p>
+          <p class="sec-links"><a class="more" href="research.html">Research areas</a><a class="more" href="members.html">Members</a></p>
+        </div>
+        <figure class="fig" id="about-fig"></figure>
       </div>
     </div>
   </section>

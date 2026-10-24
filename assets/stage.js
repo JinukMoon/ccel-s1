@@ -1,7 +1,7 @@
 /* Landing scroll stage (S1 "Pinned hero").
    A sticky 100vh pin inside a tall container; a <canvas> draws the `hero` frame of _shared/scroll/manifest.json
    chosen from scroll progress (native scroll, no smoothing). Desktop: frames over 0..80 % of the scroll, then the
-   media wipes to white while the title block rises to just under the header and the Research section slides up
+   media wipes to white while the title block rises to just under the header and the next section (News) slides up
    into the stage's last segment, so the resolved title page is never an empty screen. Mobile: frames over the
    whole stage, no overlap.
    Loading: poster in the HTML paints first; after window load, every 8th frame (+ last); the remaining frames only

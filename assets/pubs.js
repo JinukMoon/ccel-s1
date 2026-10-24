@@ -70,7 +70,7 @@
   $('f-q').addEventListener('input', function () { clearTimeout(t); t = setTimeout(apply, 120); });
   ['f-year', 'f-status', 'f-area', 'f-led'].forEach(function (id) { $(id).addEventListener('change', apply); });
 
-  // preset from the URL, e.g. publications.html?area=I (linked from the landing page's research areas)
+  // preset from the URL, e.g. publications.html?area=I (linked from the research page's area rows)
   var qs = new URLSearchParams(location.search);
   if (qs.get('area')) $('f-area').value = qs.get('area');
   if (qs.get('year')) $('f-year').value = qs.get('year');
