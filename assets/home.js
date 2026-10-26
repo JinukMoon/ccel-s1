@@ -1,6 +1,7 @@
 /* Landing page (Round v5, lean like the current Welcome.html): stage title, News + Open Position, the six pinned
-   papers in short form, the Korean lab intro and Contact. No counts or totals. Everything comes from window.CCEL.
-   Research moved to research.html (research.js), Recent Highlights to publications.html, People to members.html. */
+   papers in short form and the Korean lab intro; address and email sit in the footer. No counts or totals.
+   Everything comes from window.CCEL. Research moved to research.html (research.js), Recent Highlights to
+   publications.html, People to members.html, Contact to contact.html (Round v6). */
 (function () {
   'use strict';
   var S = window.S1, D = S.D, esc = S.esc, rich = S.rich;
@@ -44,14 +45,6 @@
   } else {
     $('about-fig').hidden = true;
   }
-
-  // ---- contact ----
-  var c = D.contact || {};
-  var rows = [['Address', c.address], ['Email', c.email ? '<a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a>' : null, true],
-    ['Professor office', c.professor_office], ['Laboratory', c.laboratory], ['Student office', c.student_office]];
-  $('contact-grid').innerHTML = rows.filter(function (r) { return r[1]; }).map(function (r) {
-    return '<div><dt>' + r[0] + '</dt><dd>' + (r[2] ? r[1] : esc(r[1])) + '</dd></div>';
-  }).join('');
 
   S.deferImages(document.getElementById('main'));
   S.landOnHash();

@@ -109,12 +109,16 @@
     ['scholar', 'Google Scholar', '0 0 24 24', '<path' + FILL + ' d="M5.24 13.77 0 9.5 12 0l12 9.5-5.24 4.27C17.55 11.25 14.98 9.5 12 9.5s-5.55 1.75-6.76 4.27zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>'],
     ['homepage', 'Homepage', '0 0 24 24', '<circle' + LINE + ' cx="12" cy="12" r="9"/><path' + LINE + ' d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/>']
   ];
+  function icon(kind) {
+    var l = LINKS.filter(function (x) { return x[0] === kind; })[0];
+    return l ? '<svg viewBox="' + l[2] + '" aria-hidden="true" focusable="false">' + l[3] + '</svg>' : '';
+  }
   function links(set, name) {
     set = set || {};
     var items = LINKS.filter(function (l) { return set[l[0]]; }).map(function (l) {
       var label = esc(name) + ' — ' + l[1];
       return '<li><a href="' + esc(linkHref(set[l[0]])) + '" target="_blank" rel="noopener" aria-label="' + label + '" title="' + label + '">' +
-        '<svg viewBox="' + l[2] + '" aria-hidden="true" focusable="false">' + l[3] + '</svg></a></li>';
+        icon(l[0]) + '</a></li>';
     });
     return items.length ? '<ul class="links">' + items.join('') + '</ul>' : '';
   }
@@ -163,6 +167,10 @@
     }
   }
 
+  // the six tabs, same order as the header nav on every page (Round v6)
+  var PAGES = [['index.html', 'Welcome'], ['professor.html', 'Professor'], ['members.html', 'Members'],
+    ['research.html', 'Research'], ['publications.html', 'Publications'], ['contact.html', 'Contact']];
+
   function footer() {
     var el = document.getElementById('site-ftr');
     if (!el) return;
@@ -171,8 +179,8 @@
       '<span class="ccel-logo-plate"><img class="ccel-logo" src="' + esc(asset(lab.logo)) + '" alt="' + esc(lab.short || '') + ' logo" loading="lazy" width="160" height="81"></span>' +
       '<div><p class="ftr-name">' + esc(lab.name) + '</p>' +
       '<p>' + esc(c.address) + '</p><p><a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a></p></div>' +
-      '<ul><li><a href="members.html">Members</a></li><li><a href="research.html">Research</a></li>' +
-      '<li><a href="publications.html">Publications</a></li><li><a href="index.html#contact">Contact</a></li></ul></div>';
+      '<ul class="ftr-nav">' + PAGES.map(function (pg) { return '<li><a href="' + pg[0] + '">' + pg[1] + '</a></li>'; }).join('') +
+      '</ul></div>';
   }
 
   // after client rendering, land on the requested anchor (the sticky stage above makes early jumps unreliable)
@@ -197,7 +205,7 @@
   window.S1 = {
     D: D, esc: esc, rich: rich, strip: strip, asset: asset, https: https, linkHref: linkHref,
     byNo: byNo, areas: areas, areaBy: areaBy, pubHref: pubHref, source: source, authors: authors,
-    coverFor: coverFor, paperForCover: paperForCover, impact: impact, cite: cite, links: links,
+    coverFor: coverFor, paperForCover: paperForCover, impact: impact, cite: cite, links: links, icon: icon,
     published: published, memberCount: memberCount, alumniCount: alumniCount, curated: curated,
     areaSummary: areaSummary, landOnHash: landOnHash, deferImages: deferImages
   };

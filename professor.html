@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Professor · CCEL</title>
+<link rel="stylesheet" href="_shared/brand/brand.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html"><img class="ccel-logo" data-logo src="_shared/img/logo2.png" width="200" height="102" alt="CCEL logo"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars"></span><span class="sr">Menu</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="professor.html" aria-current="page">Professor</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Professor only (Round v6), and only what the current prof.html shows (user rule 2026-10-26): photo, name, title lines,
+     address, email, Scholar and CV links, Education, Experience with the four service lines at its end. -->
+<main id="main" class="inner">
+  <div class="page-head page-head--solo">
+    <div class="wrap profile">
+      <div class="profile-photo" id="prof-photo"></div>
+      <div class="profile-text">
+        <h1 id="prof-name"></h1>
+        <div class="profile-title" id="prof-title"></div>
+        <dl class="profile-info" id="prof-info"></dl>
+        <ul class="profile-links" id="prof-links"></ul>
+      </div>
+    </div>
+  </div>
+  <div class="wrap cv-wrap">
+    <section class="cv" id="education" aria-labelledby="h-edu">
+      <h2 id="h-edu">Education</h2>
+      <ol class="cv-list" id="edu-list"></ol>
+    </section>
+    <section class="cv" id="experience" aria-labelledby="h-exp">
+      <h2 id="h-exp">Experience</h2>
+      <ol class="cv-list" id="exp-list"></ol>
+      <ol class="cv-list cv-list--flat" id="svc-list" aria-label="Editorial boards and memberships"></ol>
+    </section>
+  </div>
+</main>
+
+<footer class="site-ftr" id="site-ftr"></footer>
+
+<script src="_shared/content.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/professor.js"></script>
+</body>
+</html>

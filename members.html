@@ -5,6 +5,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Members · CCEL</title>
+<script>
+  /* #alumni and #alumni-<group> open the alumni view; decided before first paint (people.js keeps it in sync) */
+  if (/^#alumni(-|$)/.test(location.hash)) document.documentElement.classList.add('view-alumni');
+</script>
 <link rel="stylesheet" href="_shared/brand/brand.css">
 <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -18,44 +22,35 @@
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
         <li><a href="index.html">Welcome</a></li>
-        <li><a href="members.html#professor">Professor</a></li>
+        <li><a href="professor.html">Professor</a></li>
         <li><a href="members.html" aria-current="page">Members</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
+<!-- Round v6: current members first, one person per row as on the current members.html; the Alumni button
+     switches to the alumni view (#alumni), "Current members" switches back (#current). No professor section. -->
 <main id="main" class="inner">
   <div class="page-head">
     <div class="wrap">
       <h1>Members</h1>
       <p class="lede" id="people-lede"></p>
-      <nav class="subnav" id="people-subnav" aria-label="Member groups"></nav>
+      <nav class="gnav" id="people-subnav" aria-label="Member groups"></nav>
     </div>
   </div>
   <div class="wrap">
-    <div class="toolbar" role="group" aria-label="Filter by research type">
-      <span class="lbl" id="type-lbl">Show</span>
-      <div class="seg" id="type-filter" aria-labelledby="type-lbl">
-        <label><input type="radio" name="type" value="all" checked><span>All</span></label>
-        <label><input type="radio" name="type" value="computational"><span>Computational</span></label>
-        <label><input type="radio" name="type" value="experimental"><span>Experimental</span></label>
-      </div>
+    <div class="toolbar" role="group" aria-labelledby="type-lbl">
+      <span class="lbl" id="type-lbl">Research type</span>
+      <div class="seg" id="type-filter"></div>
     </div>
-    <section class="group" id="professor" aria-labelledby="h-prof">
-      <h2 id="h-prof">Professor</h2>
-      <div class="prof" id="prof"></div>
-      <div class="prof-cv" id="prof-cv"></div>
-    </section>
-    <div id="groups"></div>
-    <section class="group" id="alumni" aria-labelledby="h-alumni">
-      <h2 id="h-alumni">Alumni<span class="n" id="alumni-n"></span></h2>
-      <div id="alumni-groups"></div>
-    </section>
-    <div style="height:72px"></div>
+    <div class="view v-current" id="current"></div>
+    <section class="view v-alumni" id="alumni" aria-labelledby="h-alumni"></section>
+    <p class="view-foot v-current"><a class="more" href="#alumni">Alumni</a></p>
+    <p class="view-foot v-alumni"><a class="back" href="#current">Current members</a></p>
   </div>
 </main>
 
